@@ -54,6 +54,14 @@
         "dataSource": "contactsRemote"
       }
     },
+    "resources": {
+      "css": [
+      {
+        "uri": "css/detailed.css"
+      }
+      ]
+    }
+  ,
     "routing": {
       "config": {
         "routerClass": "sap.m.routing.Router",
