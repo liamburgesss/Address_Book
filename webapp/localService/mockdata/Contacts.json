@@ -1,0 +1,102 @@
+[
+	{
+		"contactID": 1,
+		"name": "Troy Jones",
+		"phone": "1-456-878-2476",
+		"address": "P.O. Box 276, 9991 Tincidunt Street",
+		"city": "Pietermaritzburg",
+		"postalZip": "7336-9361",
+		"region": "Eastern Cape",
+		"country": "South Africa"
+	},
+	{
+		"contactID": 2,
+		"name": "Camilla Mercado",
+		"phone": "1-513-475-1183",
+		"address": "9408 Vestibulum Rd.",
+		"city": "Secunda",
+		"postalZip": "3233-1253",
+		"region": "MP",
+		"country": "South Africa"
+	},
+	{
+		"contactID": 3,
+		"name": "Martina Kemp",
+		"phone": "1-873-577-3013",
+		"address": "Ap #506-3696 Mauris Road",
+		"city": "Nelspruit",
+		"postalZip": "8274-1675",
+		"region": "KZN",
+		"country": "South Africa"
+	},
+	{
+		"contactID": 4,
+		"name": "Mara Figueroa",
+		"phone": "1-436-684-4636",
+		"address": "199-2273 Elementum Rd.",
+		"city": "Soweto",
+		"postalZip": "2337-0572",
+		"region": "North West",
+		"country": "South Africa"
+	},
+	{
+		"contactID": 5,
+		"name": "Nayda Puckett",
+		"phone": "1-210-547-4019",
+		"address": "471-1290 Faucibus St.",
+		"city": "Secunda",
+		"postalZip": "5487-8666",
+		"region": "Gauteng",
+		"country": "South Africa"
+	},
+	{
+		"contactID": 6,
+		"name": "Troy Crawford",
+		"phone": "1-226-584-5741",
+		"address": "3910 Eu Rd.",
+		"city": "Nelspruit",
+		"postalZip": "7631-6313",
+		"region": "WC",
+		"country": "South Africa"
+	},
+	{
+		"contactID": 7,
+		"name": "Natalie Williamson",
+		"phone": "1-590-587-4286",
+		"address": "Ap #294-447 Enim Rd.",
+		"city": "Potchefstroom",
+		"postalZip": "6443-6970",
+		"region": "GP",
+		"country": "South Africa"
+	},
+	{
+		"contactID": 8,
+		"name": "Lana Frye",
+		"phone": "(781) 873-7875",
+		"address": "P.O. Box 402, 4245 Dictum St.",
+		"city": "Emalahleni",
+		"postalZip": "3547-7562",
+		"region": "WC",
+		"country": "South Africa"
+	},
+	{
+		"contactID": 9,
+		"name": "Herman Vaughan",
+		"phone": "(127) 789-1123",
+		"address": "P.O. Box 389, 386 Duis St.",
+		"city": "Stellenbosch",
+		"postalZip": "0460-6730",
+		"region": "NC",
+		"country": "South Africa"
+	},
+	{
+		"contactID": 10,
+		"name": "Colorado Haney",
+		"phone": "1-278-459-0617",
+		"address": "Ap #965-4775 Et St.",
+		"city": "Ladysmith",
+		"postalZip": "3656-4364",
+		"region": "Northern Cape",
+		"country": "South Africa"
+	}
+]

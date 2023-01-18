@@ -1,0 +1,36 @@
+<mvc:View
+	controllerName="pb.controller.Detailed"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:card="sap.f.cards"
+	xmlns:f="sap.f">
+	<f:Card>
+		<f:header>
+			<card:Header title="{contacts>name}" subtitle="Contact Information" />
+		</f:header>
+		<f:content>
+			<Panel>
+				<Panel>
+					<VBox>
+						<FlexBox alignItems="Stretch" justifyContent="End">
+							<Button text="Edit"></Button>
+						</FlexBox>
+						<FlexBox alignItems="Stretch" justifyContent="Start">
+							<Text text="{contacts>name}"></Text>
+						</FlexBox>
+					</VBox>
+				</Panel>
+				<Panel>
+					<VBox>
+						<FlexBox alignItems="Stretch" justifyContent="Start">
+							<Text text=""></Text><Text text="{contacts>address}"></Text>
+						</FlexBox>
+						<FlexBox alignItems="Stretch" justifyContent="Start">
+							<Text text=""></Text><Text text="{contacts>address}"></Text>
+						</FlexBox>
+					</VBox>
+				</Panel>
+			</Panel>
+		</f:content>
+	</f:Card>
+</mvc:View>

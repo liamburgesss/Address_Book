@@ -1,0 +1,51 @@
+<mvc:View
+    controllerName="pb.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:tnt="sap.tnt"
+    displayBlock="true">
+    <Shell>
+        <Table>
+            <columns>
+                <Column width="30%">
+                    <tnt:SideNavigation id="sideNavigation" selectedKey="subItem3">
+                        <tnt:NavigationList>
+                            <tnt:NavigationListItem text="Item 1" icon="sap-icon://employee">
+                                <tnt:NavigationListItem text="Sub Item 1" />
+                                <tnt:NavigationListItem text="Sub Item 2" />
+                                <tnt:NavigationListItem text="Sub Item 3" id="subItem3"
+                                    key="subItem3" />
+                                <tnt:NavigationListItem text="Sub Item 4" />
+                            </tnt:NavigationListItem>
+                            <tnt:NavigationListItem text="Item 2" icon="sap-icon://building">
+                                <tnt:NavigationListItem text="Sub Item 1" />
+                                <tnt:NavigationListItem text="Sub Item 2" />
+                                <tnt:NavigationListItem text="Sub Item 3" />
+                                <tnt:NavigationListItem text="Sub Item 4" />
+                            </tnt:NavigationListItem>
+                        </tnt:NavigationList>
+                        <tnt:fixedItem>
+                            <tnt:NavigationList>
+                                <tnt:NavigationListItem text="Item 1" icon="sap-icon://employee" />
+                                <tnt:NavigationListItem text="Item 2" icon="sap-icon://building" />
+                                <tnt:NavigationListItem text="Item 3" icon="sap-icon://card" />
+                            </tnt:NavigationList>
+                        </tnt:fixedItem>
+                    </tnt:SideNavigation>
+                </Column>
+                <Column width="auto">
+                    <List
+                        headerText="Contacts"
+                        class="sapUiResponsiveMargin"
+                        width="100%"
+                        items="{contacts>/Contacts}">
+                        <items>
+                            <ObjectListItem title="{contacts>name}" type="Navigation"
+                                press="goToDetailed"></ObjectListItem>
+                        </items>
+                    </List>
+                </Column>
+            </columns>
+        </Table>
+    </Shell>
+</mvc:View>

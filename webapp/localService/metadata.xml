@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <edmx:DataServices xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="1.0">
+        <Schema Namespace="MyContactCards.Models" xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+            <EntityType Name="Contact">
+                <Key>
+                    <PropertyRef Name="contactID" />
+                </Key>
+                <Property Name="contactID" Type="Edm.Int32" Nullable="false" />
+                <Property Name="name" Type="Edm.String" Nullable="false" />
+                <Property Name="address" Type="Edm.String" Nullable="false" />
+                <Property Name="city" Type="Edm.String" Nullable="false" />
+                <Property Name="postalZip" Type="Edm.String" Nullable="false" />
+                <Property Name="region" Type="Edm.String" Nullable="false" />
+                <Property Name="country" Type="Edm.String" Nullable="false" />
+            </EntityType>
+            <EntityContainer Name="ContactCards" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Contacts" EntityType="MyContactCards.Models.Contact" />
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
