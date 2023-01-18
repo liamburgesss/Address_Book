@@ -1,4 +1,9 @@
-.titleBox {
+.detailedInfoTitle {
     display: inline-block;
     font-weight: bold;
+    font-size: large;
+}
+
+.detailedInfo {
+    font-size: medium;
 }
