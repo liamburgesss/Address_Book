@@ -5,7 +5,7 @@
 	xmlns:card="sap.f.cards"
 	xmlns:f="sap.f">
 	<FlexBox alignItems="Stretch" justifyContent="Start">
-		<Button class="DeatiledBackButton" text="Go Home"></Button>
+		<Button class="DeatiledBackButton" press="goHome" text="Go Home"></Button>
 	</FlexBox>
 	<Carousel>
 		<f:Card>
