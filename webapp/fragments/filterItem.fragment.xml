@@ -1,0 +1,6 @@
+<core:FragmentDefinition
+   xmlns="sap.m"
+   xmlns:core="sap.ui.core" 
+   xmlns:tnt='sap.m.tnt'>
+   <tnt:NavigationListItem text=""/>
+</core:FragmentDefinition>
