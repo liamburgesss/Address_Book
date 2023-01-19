@@ -6,7 +6,7 @@
 		"address": "P.O. Box 276, 9991 Tincidunt Street",
 		"city": "Pietermaritzburg",
 		"postalZip": "7336-9361",
-		"region": "Eastern Cape",
+		"region": "EC",
 		"country": "South Africa"
 	},
 	{
@@ -36,7 +36,7 @@
 		"address": "199-2273 Elementum Rd.",
 		"city": "Soweto",
 		"postalZip": "2337-0572",
-		"region": "North West",
+		"region": "NW",
 		"country": "South Africa"
 	},
 	{
@@ -46,7 +46,7 @@
 		"address": "471-1290 Faucibus St.",
 		"city": "Secunda",
 		"postalZip": "5487-8666",
-		"region": "Gauteng",
+		"region": "GP",
 		"country": "South Africa"
 	},
 	{
@@ -96,7 +96,7 @@
 		"address": "Ap #965-4775 Et St.",
 		"city": "Ladysmith",
 		"postalZip": "3656-4364",
-		"region": "Northern Cape",
+		"region": "NC",
 		"country": "South Africa"
 	}
 ]

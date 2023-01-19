@@ -9,7 +9,7 @@
             <columns>
                 <Column width="30%">
                     <tnt:SideNavigation id="sideNavigation" selectedKey="Province">
-                        <tnt:NavigationList id="provinceFilter">
+                        <tnt:NavigationList id="provinceFilter" >
                             <tnt:NavigationListItem text="Province" icon="sap-icon://suitcase">
                                 <tnt:NavigationListItem text="Sub Item 1" />
                             </tnt:NavigationListItem>
@@ -21,6 +21,7 @@
                 </Column>
                 <Column width="auto">
                     <List
+                        id="contactsList"
                         headerText="Contacts"
                         class="sapUiResponsiveMargin"
                         width="100%"
