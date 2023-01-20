@@ -3,10 +3,15 @@
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:card="sap.f.cards"
+	xmlns:core="sap.ui.core"
 	xmlns:f="sap.f">
-	<FlexBox alignItems="Stretch" justifyContent="Start">
-		<Button class="DeatiledBackButton" press="goHome" text="Go Home"></Button>
-	</FlexBox>
+	<Panel>
+		<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+			<Button class="DeatiledBackButton" press="goHome" text="Go Home"></Button>
+			<Button class="DeatiledBackButton" press="" text="Save"></Button>
+			<Button class="DeatiledBackButton" press="goHome" text="Go Home"></Button>
+		</FlexBox>
+	</Panel>
 	<Carousel>
 		<f:Card>
 			<f:header>
@@ -33,7 +38,8 @@
 				<Panel>
 					<VBox>
 						<FlexBox alignItems="Stretch" justifyContent="Start">
-							<Text class="detailedInfoTitle" text="Preffered means of contact- number"></Text>
+							<Text class="detailedInfoTitle"
+								text="Preffered means of contact- number"></Text>
 						</FlexBox>
 						<FlexBox alignItems="Stretch" justifyContent="Start">
 							<Input class="detailedInfo" value="{contacts>phone}"></Input>
@@ -127,6 +133,6 @@
 				</Panel>
 			</f:content>
 		</f:Card>
-		
+
 	</Carousel>
 </mvc:View>
