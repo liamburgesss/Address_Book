@@ -1,6 +1,6 @@
 sap.ui.define(
   ["sap/ui/core/mvc/Controller", "sap/ui/model/json/JSONModel"],
-  function (Controller) {
+  function (Controller, JSONModel) {
     "use strict";
     return Controller.extend("pb.controller.App", {
       goToDetailed: function (oEvent, JSONModel) {
@@ -12,7 +12,7 @@ sap.ui.define(
           ),
         });
       },
-      onBeforeRendering: function (oEvent) {
+      onAfterRendering: function (oEvent) {
         setTimeout(
           function () {
             var provinces = [];
@@ -21,10 +21,6 @@ sap.ui.define(
             var oList = Object.values(
               this.getView().getModel("contacts").getProperty("/")
             );
-
-            provinces = [];
-            address = [];
-
             for (var i = 0; i < oList.length; i++) {
               provinces.push(oList[i].region);
               address.push(oList[i].address);
@@ -46,11 +42,18 @@ sap.ui.define(
               jsonProvince.push({ province: provinces[i] });
             }
 
+            console.log(jsonAddress);
+
+            jsonProvince = {"provinces": jsonProvince};
             var oModel = new JSONModel(jsonProvince);
             this.getView().setModel(oModel);
+            
+            jsonAddress = {"addresses": jsonAddress};
+            var oModel1 = new JSONModel(jsonAddress);
+            this.getView().setModel(oModel1);
 
-            var oModel = new JSONModel(jsonAddress);
-            this.getView().setModel(oModel);
+            console.log(jsonAddress);
+
           }.bind(this),
           500
         );

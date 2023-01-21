@@ -20,7 +20,7 @@
                     </tnt:SideNavigation>
                 </Column>
                 <Column width="auto">
-                    <List
+                    <!-- <List
                         id="contactsList"
                         headerText="Contacts"
                         class="sapUiResponsiveMargin"
@@ -28,6 +28,17 @@
                         items="{contacts>/Contacts}">
                         <items>
                             <ObjectListItem title="{contacts>name}" type="Navigation"
+                                press="goToDetailed"></ObjectListItem>
+                        </items>
+                    </List> -->
+                    <List
+                        id="contactsList"
+                        headerText="Contacts"
+                        class="sapUiResponsiveMargin"
+                        width="100%"
+                        items="{provinces}">
+                        <items>
+                            <ObjectListItem title="{province}" type="Navigation"
                                 press="goToDetailed"></ObjectListItem>
                         </items>
                     </List>
