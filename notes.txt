@@ -1,0 +1,8 @@
+// "contacts": {
+      //   "dataSource": "contactsRemote"
+      // }
+
+      "contacts": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "./localService/mockdata/Contacts.json"
+      }

@@ -10,17 +10,17 @@
                 <Column width="30%">
                     <tnt:SideNavigation id="sideNavigation" selectedKey="Province">
                         <tnt:NavigationList id="provinceFilter" >
-                            <tnt:NavigationListItem text="Province" icon="sap-icon://suitcase">
-                                <tnt:NavigationListItem text="Sub Item 1" />
+                            <tnt:NavigationListItem text="Province" expanded="false" icon="sap-icon://suitcase" items="{provinces>/provinces}">
+                                <tnt:NavigationListItem text="{provinces>province}" />
                             </tnt:NavigationListItem>
-                            <tnt:NavigationListItem id="townFilter" text="Town" icon="sap-icon://map-fill">
-                                <tnt:NavigationListItem text="Sub Item 1" />
+                            <tnt:NavigationListItem id="townFilter" expanded="false" text="By Address" items="{addresses>/addresses}" icon="sap-icon://map-fill">
+                                <tnt:NavigationListItem text="{addresses>address}" />
                             </tnt:NavigationListItem>
                         </tnt:NavigationList>
                     </tnt:SideNavigation>
                 </Column>
                 <Column width="auto">
-                    <!-- <List
+                    <List
                         id="contactsList"
                         headerText="Contacts"
                         class="sapUiResponsiveMargin"
@@ -28,17 +28,6 @@
                         items="{contacts>/Contacts}">
                         <items>
                             <ObjectListItem title="{contacts>name}" type="Navigation"
-                                press="goToDetailed"></ObjectListItem>
-                        </items>
-                    </List> -->
-                    <List
-                        id="contactsList"
-                        headerText="Contacts"
-                        class="sapUiResponsiveMargin"
-                        width="100%"
-                        items="{provinces}">
-                        <items>
-                            <ObjectListItem title="{province}" type="Navigation"
                                 press="goToDetailed"></ObjectListItem>
                         </items>
                     </List>

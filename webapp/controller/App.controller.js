@@ -12,15 +12,16 @@ sap.ui.define(
           ),
         });
       },
-      onAfterRendering: function (oEvent) {
+      onBeforeRendering: function (oEvent) {
         setTimeout(
           function () {
             var provinces = [];
             var address = [];
-
+            
             var oList = Object.values(
               this.getView().getModel("contacts").getProperty("/")
             );
+            
             for (var i = 0; i < oList.length; i++) {
               provinces.push(oList[i].region);
               address.push(oList[i].address);
@@ -42,20 +43,16 @@ sap.ui.define(
               jsonProvince.push({ province: provinces[i] });
             }
 
-            console.log(jsonAddress);
-
             jsonProvince = {"provinces": jsonProvince};
-            var oModel = new JSONModel(jsonProvince);
-            this.getView().setModel(oModel);
+            var oModel2 = new JSONModel(jsonProvince);
+            this.getView().setModel(oModel2, "provinces");
             
             jsonAddress = {"addresses": jsonAddress};
             var oModel1 = new JSONModel(jsonAddress);
-            this.getView().setModel(oModel1);
-
-            console.log(jsonAddress);
+            this.getView().setModel(oModel1, "addresses");
 
           }.bind(this),
-          500
+          100
         );
       },
     });
