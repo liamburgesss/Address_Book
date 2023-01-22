@@ -29,6 +29,23 @@ sap.ui.define(
           oRouter.navTo("phonebook", {}, true);
         }
       },
+      resetData : function () {
+        var details =
+          Object.values(
+            this.getView().getModel("contacts").oData
+          )[0];
+
+          console.log(details);
+
+        this.byId("nameInput").setValue(details.name);
+        this.byId("zipInput").setValue(details.postalZip);
+        this.byId("regionInput").setValue(details.region);
+        this.byId("contactInput").setValue(details.phone);
+        this.byId("countryInput").setValue(details.country);
+        this.byId("cityInput").setValue(details.city);
+        this.byId("addressInput").setValue(details.address);
+       
+      }
     });
   }
 );

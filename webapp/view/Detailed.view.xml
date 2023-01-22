@@ -5,134 +5,165 @@
 	xmlns:card="sap.f.cards"
 	xmlns:core="sap.ui.core"
 	xmlns:f="sap.f">
-	<Panel>
-		<FlexBox alignItems="Start" justifyContent="SpaceBetween">
-			<Button class="DeatiledBackButton" press="goHome" text="Go Home"></Button>
-			<Button class="DeatiledBackButton" press="" text="Save"></Button>
-			<Button class="DeatiledBackButton" press="goHome" text="Go Home"></Button>
-		</FlexBox>
-	</Panel>
-	<Carousel>
-		<f:Card>
-			<f:header>
-				<card:Header title="{contacts>name}" subtitle="Contact Information" />
-			</f:header>
-			<f:content>
-				<Panel>
-					<VBox>
-						<FlexBox alignItems="Stretch" justifyContent="Start">
-							<Text class="detailedInfoTitle" text="Contactee Name"></Text>
-						</FlexBox>
-						<FlexBox alignItems="Stretch" justifyContent="Start">
-							<Input class="detailedInfo" value="{contacts>name}"></Input>
-						</FlexBox>
-					</VBox>
-				</Panel>
-			</f:content>
-		</f:Card>
-		<f:Card>
-			<f:header>
-				<card:Header title="{contacts>name}" subtitle="Contact Information" />
-			</f:header>
-			<f:content>
-				<Panel>
-					<VBox>
-						<FlexBox alignItems="Stretch" justifyContent="Start">
-							<Text class="detailedInfoTitle"
-								text="Preffered means of contact- number"></Text>
-						</FlexBox>
-						<FlexBox alignItems="Stretch" justifyContent="Start">
-							<Input class="detailedInfo" value="{contacts>phone}"></Input>
-						</FlexBox>
-					</VBox>
-				</Panel>
-			</f:content>
-		</f:Card>
-		<f:Card>
-			<f:header>
-				<card:Header title="{contacts>name}" subtitle="Contact Information" />
-			</f:header>
-			<f:content>
-				<Panel>
-					<VBox>
-						<FlexBox alignItems="Stretch" justifyContent="Start">
-							<Text class="detailedInfoTitle" text="Address of Existence"></Text>
-						</FlexBox>
-						<FlexBox alignItems="Stretch" justifyContent="Start">
-							<Input class="detailedInfo" value="{contacts>address}"></Input>
-						</FlexBox>
-					</VBox>
-				</Panel>
-			</f:content>
-		</f:Card>
-		<f:Card>
-			<f:header>
-				<card:Header title="{contacts>name}" subtitle="Contact Information" />
-			</f:header>
-			<f:content>
-				<Panel>
-					<VBox>
-						<FlexBox alignItems="Stretch" justifyContent="Start">
-							<Text class="detailedInfoTitle" text="City of Existence"></Text>
-						</FlexBox>
-						<FlexBox alignItems="Stretch" justifyContent="Start">
-							<Input class="detailedInfo" value="{contacts>city}"></Input>
-						</FlexBox>
-					</VBox>
-				</Panel>
-			</f:content>
-		</f:Card>
-		<f:Card>
-			<f:header>
-				<card:Header title="{contacts>name}" subtitle="Contact Information" />
-			</f:header>
-			<f:content>
-				<Panel>
-					<VBox>
-						<FlexBox alignItems="Stretch" justifyContent="Start">
-							<Text class="detailedInfoTitle" text="Postal Zip"></Text>
-						</FlexBox>
-						<FlexBox alignItems="Stretch" justifyContent="Start">
-							<Input class="detailedInfo" value="{contacts>postalZip}"></Input>
-						</FlexBox>
-					</VBox>
-				</Panel>
-			</f:content>
-		</f:Card>
-		<f:Card>
-			<f:header>
-				<card:Header title="{contacts>name}" subtitle="Contact Information" />
-			</f:header>
-			<f:content>
-				<Panel>
-					<VBox>
-						<FlexBox alignItems="Stretch" justifyContent="Start">
-							<Text class="detailedInfoTitle" text="Region of Existence"></Text>
-						</FlexBox>
-						<FlexBox alignItems="Stretch" justifyContent="Start">
-							<Input class="detailedInfo" value="{contacts>region}"></Input>
-						</FlexBox>
-					</VBox>
-				</Panel>
-			</f:content>
-		</f:Card>
-		<f:Card>
-			<f:header>
-				<card:Header title="{contacts>name}" subtitle="Contact Information" />
-			</f:header>
-			<f:content>
-				<Panel>
-					<VBox>
-						<FlexBox alignItems="Stretch" justifyContent="Start">
-							<Text class="detailedInfoTitle" text="Country"></Text>
-						</FlexBox>
-						<FlexBox alignItems="Stretch" justifyContent="Start">
-							<Input class="detailedInfo" value="{contacts>region}"></Input>
-						</FlexBox>
-					</VBox>
-				</Panel>
-			</f:content>
-		</f:Card>
-
-	</Carousel>
+	<App>
+		<Page>
+			<Panel>
+				<FlexBox alignItems="Start" justifyContent="SpaceBetween">
+					<Button class="DeatiledBackButton" width="100%" press="goHome" type="Back"
+						text="Go Home">
+						<layoutData>
+							<FlexItemData growFactor="1" />
+						</layoutData>
+					</Button>
+					<Button class="DeatiledBackButton" width="100%" type="Reject" press="resetData"
+						text="Reset Info">
+						<layoutData>
+							<FlexItemData growFactor="2" />
+						</layoutData>
+					</Button>
+					<Button class="DeatiledBackButton" width="100%" press="" type="Accept"
+						text="Save">
+						<layoutData>
+							<FlexItemData growFactor="2" />
+						</layoutData>
+					</Button>
+					<Button class="DeatiledBackButton" width="100%" press="goHome" type="Back"
+						text="Go Home">
+						<layoutData>
+							<FlexItemData growFactor="1" />
+						</layoutData>
+					</Button>
+				</FlexBox>
+			</Panel>
+			<Carousel>
+				<f:Card>
+					<f:header>
+						<card:Header title="{contacts>name}" subtitle="Contact Information" />
+					</f:header>
+					<f:content>
+						<Panel>
+							<VBox>
+								<FlexBox alignItems="Stretch" justifyContent="Start">
+									<Text class="detailedInfoTitle" text="Contactee Name"></Text>
+								</FlexBox>
+								<FlexBox alignItems="Stretch" justifyContent="Start">
+									<Input class="detailedInfo" id="nameInput"
+										value="{contacts>name}"></Input>
+								</FlexBox>
+							</VBox>
+						</Panel>
+					</f:content>
+				</f:Card>
+				<f:Card>
+					<f:header>
+						<card:Header title="{contacts>name}" subtitle="Contact Information" />
+					</f:header>
+					<f:content>
+						<Panel>
+							<VBox>
+								<FlexBox alignItems="Stretch" justifyContent="Start">
+									<Text class="detailedInfoTitle"
+										text="Preffered means of contact- number"></Text>
+								</FlexBox>
+								<FlexBox alignItems="Stretch" justifyContent="Start">
+									<Input class="detailedInfo" id="contactInput"
+										value="{contacts>phone}"></Input>
+								</FlexBox>
+							</VBox>
+						</Panel>
+					</f:content>
+				</f:Card>
+				<f:Card>
+					<f:header>
+						<card:Header title="{contacts>name}" subtitle="Contact Information" />
+					</f:header>
+					<f:content>
+						<Panel>
+							<VBox>
+								<FlexBox alignItems="Stretch" justifyContent="Start">
+									<Text class="detailedInfoTitle" text="Address of Existence"></Text>
+								</FlexBox>
+								<FlexBox alignItems="Stretch" justifyContent="Start">
+									<Input class="detailedInfo" id="addressInput"
+										value="{contacts>address}"></Input>
+								</FlexBox>
+							</VBox>
+						</Panel>
+					</f:content>
+				</f:Card>
+				<f:Card>
+					<f:header>
+						<card:Header title="{contacts>name}" subtitle="Contact Information" />
+					</f:header>
+					<f:content>
+						<Panel>
+							<VBox>
+								<FlexBox alignItems="Stretch" justifyContent="Start">
+									<Text class="detailedInfoTitle" text="City of Existence"></Text>
+								</FlexBox>
+								<FlexBox alignItems="Stretch" justifyContent="Start">
+									<Input class="detailedInfo" id="cityInput"
+										value="{contacts>city}"></Input>
+								</FlexBox>
+							</VBox>
+						</Panel>
+					</f:content>
+				</f:Card>
+				<f:Card>
+					<f:header>
+						<card:Header title="{contacts>name}" subtitle="Contact Information" />
+					</f:header>
+					<f:content>
+						<Panel>
+							<VBox>
+								<FlexBox alignItems="Stretch" justifyContent="Start">
+									<Text class="detailedInfoTitle" text="Postal Zip"></Text>
+								</FlexBox>
+								<FlexBox alignItems="Stretch" justifyContent="Start">
+									<Input class="detailedInfo" id="zipInput"
+										value="{contacts>postalZip}"></Input>
+								</FlexBox>
+							</VBox>
+						</Panel>
+					</f:content>
+				</f:Card>
+				<f:Card>
+					<f:header>
+						<card:Header title="{contacts>name}" subtitle="Contact Information" />
+					</f:header>
+					<f:content>
+						<Panel>
+							<VBox>
+								<FlexBox alignItems="Stretch" justifyContent="Start">
+									<Text class="detailedInfoTitle" text="Region of Existence"></Text>
+								</FlexBox>
+								<FlexBox alignItems="Stretch" justifyContent="Start">
+									<Input class="detailedInfo" id="regionInput"
+										value="{contacts>region}"></Input>
+								</FlexBox>
+							</VBox>
+						</Panel>
+					</f:content>
+				</f:Card>
+				<f:Card>
+					<f:header>
+						<card:Header title="{contacts>name}" subtitle="Contact Information" />
+					</f:header>
+					<f:content>
+						<Panel>
+							<VBox>
+								<FlexBox alignItems="Stretch" justifyContent="Start">
+									<Text class="detailedInfoTitle" text="Country"></Text>
+								</FlexBox>
+								<FlexBox alignItems="Stretch" justifyContent="Start">
+									<Input class="detailedInfo" id="countryInput"
+										value="{contacts>region}"></Input>
+								</FlexBox>
+							</VBox>
+						</Panel>
+					</f:content>
+				</f:Card>
+			</Carousel>
+		</Page>
+	</App>
 </mvc:View>
