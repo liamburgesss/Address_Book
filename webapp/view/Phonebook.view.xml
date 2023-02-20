@@ -4,35 +4,40 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:tnt="sap.tnt"
     displayBlock="true">
-    <Shell>
-        <Table>
-            <columns>
-                <Column width="30%">
-                    <tnt:SideNavigation id="sideNavigation" selectedKey="Province">
-                        <tnt:NavigationList id="provinceFilter" >
-                            <tnt:NavigationListItem text="Province" expanded="false" icon="sap-icon://suitcase" items="{provinces>/provinces}">
-                                <tnt:NavigationListItem text="{provinces>province}" />
-                            </tnt:NavigationListItem>
-                            <tnt:NavigationListItem id="townFilter" expanded="false" text="By Address" items="{addresses>/addresses}" icon="sap-icon://map-fill">
-                                <tnt:NavigationListItem text="{addresses>address}" />
-                            </tnt:NavigationListItem>
-                        </tnt:NavigationList>
-                    </tnt:SideNavigation>
-                </Column>
-                <Column width="auto">
-                    <List
-                        id="contactsList"
-                        headerText="Contacts"
-                        class="sapUiResponsiveMargin"
-                        width="100%"
-                        items="{contacts>/Contacts}">
-                        <items>
-                            <ObjectListItem title="{contacts>name}" type="Navigation"
-                                press="goToDetailed"></ObjectListItem>
-                        </items>
-                    </List>
-                </Column>
-            </columns>
-        </Table>
-    </Shell>
+    <App>
+        <Shell>
+            <Table>
+                <columns>
+                    <Column width="30%">
+                        <tnt:SideNavigation id="sideNavigation" selectedKey="Province">
+                            <tnt:NavigationList itemSelect="onFilterProvince" id="provinceFilter">
+                                <tnt:NavigationListItem text="Province" expanded="false"
+                                    icon="sap-icon://suitcase" items="{provinces>/provinces}">
+                                    <tnt:NavigationListItem text="{provinces>province}" />
+                                </tnt:NavigationListItem>
+                                <tnt:NavigationListItem id="townFilter" expanded="false"
+                                    text="By Address" items="{addresses>/addresses}"
+                                    icon="sap-icon://map-fill">
+                                    <tnt:NavigationListItem text="{addresses>address}" />
+                                </tnt:NavigationListItem>
+                            </tnt:NavigationList>
+                        </tnt:SideNavigation>
+                    </Column>
+                    <Column width="auto">
+                        <List
+                            id="contactsList"
+                            headerText="Contacts"
+                            class="sapUiResponsiveMargin"
+                            width="100%"
+                            items="{contacts>/Contacts}">
+                            <items>
+                                <ObjectListItem title="{contacts>name}"  type="Navigation"
+                                    press="goToDetailed"></ObjectListItem>
+                            </items>
+                        </List>
+                    </Column>
+                </columns>
+            </Table>
+        </Shell>
+    </App>  
 </mvc:View>

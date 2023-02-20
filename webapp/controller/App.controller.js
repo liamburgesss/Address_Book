@@ -1,6 +1,11 @@
 sap.ui.define(
-  ["sap/ui/core/mvc/Controller", "sap/ui/model/json/JSONModel"],
-  function (Controller, JSONModel) {
+  [
+    "sap/ui/core/mvc/Controller",
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/model/Filter",
+    "sap/ui/model/FilterOperator",
+  ],
+  function (Controller, JSONModel, Filter, FilterOperator) {
     "use strict";
     return Controller.extend("pb.controller.App", {
       goToDetailed: function (oEvent, JSONModel) {
@@ -17,11 +22,11 @@ sap.ui.define(
           function () {
             var provinces = [];
             var address = [];
-            
+
             var oList = Object.values(
               this.getView().getModel("contacts").getProperty("/")
             );
-            
+
             for (var i = 0; i < oList.length; i++) {
               provinces.push(oList[i].region);
               address.push(oList[i].address);
@@ -43,17 +48,38 @@ sap.ui.define(
               jsonProvince.push({ province: provinces[i] });
             }
 
-            jsonProvince = {"provinces": jsonProvince};
+            jsonProvince = { provinces: jsonProvince };
             var oModel2 = new JSONModel(jsonProvince);
             this.getView().setModel(oModel2, "provinces");
-            
-            jsonAddress = {"addresses": jsonAddress};
+
+            jsonAddress = { addresses: jsonAddress };
             var oModel1 = new JSONModel(jsonAddress);
             this.getView().setModel(oModel1, "addresses");
-
           }.bind(this),
           100
         );
+      },
+      onFilterProvince: function (oEvent) {
+        console.log(oEvent)
+
+        var aFilter = [];
+        var sQuery = oEvent.getParameters().item.getText();
+        aFilter.push(new Filter("region", FilterOperator.Contains, sQuery));
+
+        // filter binding
+        var oList = this.byId("contactsList");
+        var oBinding = oList.getBinding("items");
+        oBinding.filter(aFilter);
+      },
+      onFilterAddress: function (oEvent) {
+        var aFilter = [];
+        var sQuery = oEvent.getParameters().item.getText();
+        aFilter.push(new Filter("address", FilterOperator.Contains, sQuery));
+
+        // filter binding
+        var oList = this.byId("contactsList");
+        var oBinding = oList.getBinding("items");
+        oBinding.filter(aFilter);
       },
     });
   }
